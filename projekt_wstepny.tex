@@ -17,6 +17,11 @@
 
 
 \begin{document}
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+
 \begin{titlepage}
 
 \begin{minipage}{0.33 \textwidth}
@@ -77,5 +82,14 @@ Przewidywani użytkownicy sytemu to:
 \subsection{Ograniczenia}
 \subsection{Założenia i zależności}
 \section{Wymagania funkcjonalne}
+\begin{enumerate}
+\item Sprawdzanie aktualnego stanu zaopatrzenia magazynu i poszczególnych cukierni.
+\item Generowanie raportów z wybranego okresu czasu.
+\item Konfigurowanie zawartości raptów(wybór sklepów i magazynów, wybór typów produktów).
+\item Obsługa magazynów(dostawy i towaru płatności).
+\item Obsługa kas(sprzedaż przyjmowanie płatności).
+\item Automatyczne wypłacanie wynagrodzenia pracownikom.
+\item 
+\end{enumerate}
 \section{Wymagania niefunkcjonalne}
 \end{document}
