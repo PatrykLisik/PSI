@@ -17,11 +17,6 @@
 
 
 \begin{document}
-
-\newcommand{\SubItem}[1]{
-    {\setlength\itemindent{15pt} \item[-] #1}
-}
-
 \begin{titlepage}
 
 \begin{minipage}{0.33 \textwidth}
@@ -43,6 +38,7 @@ Imię i nazwisko:\\
 \end{minipage}
 
 \vspace{3cm}
+
 \begin{minipage}{0.5\textwidth}
 \begin{flushleft}
 \Large
@@ -76,16 +72,29 @@ Przewidywani użytkownicy sytemu to:
 \item Klient
 \item Kasjer
 \item Magazynier
-\itrm Manager 
+\item Manager 
 \end{enumerate}
 \subsection{Główne funkcje produktu}
+\begin{itemize}
+    \item Sprzedaż
+    \begin{itemize}
+        \item  Bezpośrednio w cukierni
+        \item  Poprzez stronę internetową
+    \end{itemize}
+
+    \item Przyjmowanie dostaw
+    \item Automatyczne wykonywanie przelewów z pensjami
+    \item Obsługa promocji
+    \item Informowanie o aktualnym stanie magazynów i sklepów
+\end{itemize}
 \subsection{Ograniczenia}
+
 \subsection{Założenia i zależności}
 \section{Wymagania funkcjonalne}
 \begin{enumerate}
 \item Sprawdzanie aktualnego stanu zaopatrzenia magazynu i poszczególnych cukierni.
 \item Generowanie raportów z wybranego okresu czasu.
-\item Konfigurowanie zawartości raptów(wybór sklepów i magazynów, wybór typów produktów).
+\item Konfigurowanie zawartości raportów (wybór sklepów i magazynów, wybór typów produktów).
 \item Obsługa magazynów(dostawy i towaru płatności).
 \item Obsługa kas(sprzedaż przyjmowanie płatności).
 \item Obsługa kart płatniczych Visa, MasterCard, AmericanExpress oraz systemów płacenia telefonem BLIK, GPay, ApplePay
