@@ -1,10 +1,14 @@
-\documentclass[16pt,a4paper]{article}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb}
 \usepackage{polski}
 \usepackage[polish]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{bookmark}
 
 %foot
 \usepackage{fancyhdr}
@@ -13,10 +17,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \fancyfoot[L]{Patryk Lisik, Adam Sadowski \textit{Cukiernia pod wanilinowym uśmieszkiem}}
-%\fancyfoot[R]{\thepage\ / \pageref{LastPage}}
+\fancyfoot[R]{\thepage\ / \pageref{LastPage}}
 
 
 \begin{document}
+
 \begin{titlepage}
 
 \begin{minipage}{0.33 \textwidth}
@@ -39,10 +44,10 @@ Imię i nazwisko:\\
 
 \vspace{3cm}
 
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.9\textwidth}
 \begin{flushleft}
 \Large
-Kierunek: \textsc{Informatyka} \\
+Kierunek: \textsc{Informatyka -- SIBD} \\
 rok akademicki: \textsc{2018/2019} \\
 grupa \textsc{wtorek 12:30} \linebreak\linebreak
 \end{flushleft}
@@ -60,12 +65,34 @@ grupa \textsc{wtorek 12:30} \linebreak\linebreak
 \subsection{Cel dokumentu}
 Celem dokumentu jest zdefiniowanie i opisanie zadań stawianych przed system informatycznym sieci cukierni. Dokument jest jedynie mglistym przybliżeniem opisywanego systemu i nie ma za zadanie podawania dokładnych sposobów realizacji przedstawionych wymagań.
 \subsection{Zakres produktu}
-System ma zapewnić kompleksową obsługę sieci małych cukierni. System ma obsługiwać wszystkie wejścia jak dostawy towaru, płatności czy pensje. Ponadto ma mieć możliwość generowania raportów z podanego okresu czasu określających ile i jakiego typu produkty były najpopularniejsze w danym czasie oraz przedstawić bieżący stan zaopatrzenia w magazynach i sklepach. 
+System kierowany jest do:
+\begin{itemize}
+    \item Klientów -- umożliwiając im wygodne zakupy wyrobów
+    \item Pracowników cukierni -- przyśpieszając i ułatwiając ich pracę
+    \item Managerów cukierni --  umożliwiając łatwe monitorowanie stanu sklepów i magazynów 
+\end{itemize}
 \subsection{Definicje akronimy i skróty}
+\begin{enumerate}
+    \item Visa
+    \item MasterCard
+    \item AmericanExpress
+    \item BLIK
+    \item GPay
+    \item ApplePay
+    \item Magazynier
+    \item Kasjer
+    \item Klient
+    \item Promocja
+    \item Produkt niezdatny do sprzedaży
+\end{enumerate}
 \subsection{Odwołania do literatury}
 \subsection{Omówienie dokumentu}
 \section{Opis ogólny}
 \subsection{Kontekst funkcjonowania}
+System ma zapewnić kompleksową obsługę sieci małych cukierni.
+System ma obsługiwać wszystkie wejścia jak dostawy towaru, płatności czy pensje. 
+Ponadto ma mieć możliwość generowania raportów z podanego okresu czasu określających ile i jakiego typu produkty były najpopularniejsze w danym czasie oraz przedstawić bieżący stan zaopatrzenia w magazynach i sklepach. 
+
 \subsection{Charakterystyka użytkowników}
 Przewidywani użytkownicy sytemu to:
 \begin{enumerate}
@@ -88,8 +115,10 @@ Przewidywani użytkownicy sytemu to:
     \item Informowanie o aktualnym stanie magazynów i sklepów
 \end{itemize}
 \subsection{Ograniczenia}
+System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z 27.04.2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) (Dz. U. UE. L. z 2016 r. Nr 119, str. 1).
 
 \subsection{Założenia i zależności}
+
 \section{Wymagania funkcjonalne}
 \begin{enumerate}
 \item Sprawdzanie aktualnego stanu zaopatrzenia magazynu i poszczególnych cukierni.
@@ -98,17 +127,18 @@ Przewidywani użytkownicy sytemu to:
 \item Obsługa magazynów(dostawy i towaru płatności).
 \item Obsługa kas(sprzedaż przyjmowanie płatności).
 \item Obsługa kart płatniczych Visa, MasterCard, AmericanExpress oraz systemów płacenia telefonem BLIK, GPay, ApplePay
-\item Automatyczne wypłacanie wynagrodzenia pracownikom.
+\item Automatyczne wykonywanie przelewu z wynagrodzeniem dla pracowników.
 \item Zamawianie przez wyrobów przez stronę internetową.
 \item Dodawanie promocji na dany okres czasu.
 \item Usuwanie ze stanu zaopatrzenia produktów niezdatnych do sprzedaży.
 \end{enumerate}
 \section{Wymagania niefunkcjonalne}
 \begin{enumerate}
-\item Każdy produkt musi mieć cenę wyższą niż 0.0 zł
+\item Każdy produkt musi mieć cenę wyższą niż 0.01 zł
 \item Promocja wyrażona w procentach musi zwierać się w przedziale 5\%-95\% włącznie.
 \item System musi działać przez 99.99\% roku(może nie działać przed 518min) z wyłączaniem przerw na konserwację.
 \item Czas uruchomiania poniżej 5 min.
 \item Czas od kliknięcia do otrzymania potwierdzania o przyjęciu zmówienia nie większy niż 45 sekund. 
 \end{enumerate}
+
 \end{document}
