@@ -87,6 +87,16 @@ System kierowany jest do:
 \end{enumerate}
 \subsection{Odwołania do literatury}
 \subsection{Omówienie dokumentu}
+\begin{description}
+    \item [Pierwsza część] \hfill \\
+            Pierwsza część składa się z pięciu podsekcji, których głównym celem jest objaśnienie struktury dokumentu oraz później używanych pojęć i skrótów.
+    \item [Druga część] \hfill \\
+            Druga część podobnie jak pierwsza składa się z pięciu podsekcji, zawierają one zarys funkcjonowania sytemu, charakterystykę użytkowników oraz jego ograniczenia.
+    \item [Trzecia część] \hfill \\
+            Trzecia część przedstawia wymagania funkcjonalne stawiane systemowi. Jest to wypunktowana lista akcji jakie system musi wykonywać.
+    \item [Czwarta część] \hfill \\
+            Część czwarta poświęcona jest wymaganiom niefunkcjonalnym występującym w systemie. Jest to zbiór ograniczeń jakie musi spełniać system, przy wykonywaniu wymagań funkcjonalnych.
+    \end{description}
 \section{Opis ogólny}
 \subsection{Kontekst funkcjonowania}
 System ma zapewnić kompleksową obsługę sieci małych cukierni.
@@ -118,7 +128,13 @@ Przewidywani użytkownicy sytemu to:
 System musi spełniać założenia zgodne z rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z 27.04.2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) (Dz. U. UE. L. z 2016 r. Nr 119, str. 1).
 
 \subsection{Założenia i zależności}
-
+\begin{enumerate}
+    \item Brak możliwości sprzedaży online jeśli produkt nie znajduje sie w żadnym z magazynów lub punktów sprzedaży.
+    \item Brak możliwości sprzedaży online produktów o bardzo krótkiej przydatności do spożycia.
+    \item Jeśli produkt ulegnie uszkodzeniu w transporcie lub przeterminuje się powinien zostać wyłączony ze stanu.
+    \item Promocje nie mogą powodować ceny produktu mniejszej niż 0.01 zł.
+    \item 
+\end{enumerate}
 \section{Wymagania funkcjonalne}
 \begin{enumerate}
 \item Sprawdzanie aktualnego stanu zaopatrzenia magazynu i poszczególnych cukierni.
